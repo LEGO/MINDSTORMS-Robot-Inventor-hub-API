@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hub.port – Port &mdash; hub-api  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hub.sound – Sound" href="mod_sound.html" />
+    <link rel="prev" title="hub.motion – Motion" href="mod_motion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hub-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.2.01.0103-d08b6fe
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Hub modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pkg_hub.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_battery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.battery</span></code> – Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.bluetooth</span></code> – Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_button.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.button</span></code> – Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_display.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code> – Display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_motion.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod_sound.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.sound</span></code> – Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_supervision.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.supervision</span></code> – Supervision</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_image.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_bt_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.BT_VCP</span></code> – BT_VCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_usb_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.USB_VCP</span></code> – USB_VCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Instantiated classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_port.html">Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motorpair.html">MotorPair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_pin.html">Pin</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Documentation license</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hub-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-hub.port">
+<span id="hub-port-port"></span><h1><a class="reference internal" href="#module-hub.port" title="hub.port"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code></a> – Port<a class="headerlink" href="#module-hub.port" title="Permalink to this headline">¶</a></h1>
+<p>This module contains instances of the <a class="reference internal" href="class_port.html#Port" title="Port"><code class="xref py py-class docutils literal notranslate"><span class="pre">Port</span></code></a> class,
+created automatically when the hub boots.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="py data">
+<dt id="hub.port.A">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">A</span></code><a class="headerlink" href="#hub.port.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port A on the hub.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.B">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">B</span></code><a class="headerlink" href="#hub.port.B" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port B on the hub.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.C">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">C</span></code><a class="headerlink" href="#hub.port.C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port C on the hub.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.D">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">D</span></code><a class="headerlink" href="#hub.port.D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port D on the hub.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.E">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">E</span></code><a class="headerlink" href="#hub.port.E" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port E on the hub.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.F">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">F</span></code><a class="headerlink" href="#hub.port.F" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port F on the hub.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<p id="port-constants-events">These constants can be used with the <a class="reference internal" href="class_port.html#Port" title="Port"><code class="xref py py-class docutils literal notranslate"><span class="pre">Port.callback</span></code></a> method.</p>
+<p class="rubric">Port events</p>
+<dl class="py data">
+<dt id="hub.port.DETACHED">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">DETACHED</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#hub.port.DETACHED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A device was detached from the port.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.ATTACHED">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">ATTACHED</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#hub.port.ATTACHED" title="Permalink to this definition">¶</a></dt>
+<dd><p>A new device is attached to the port.</p>
+</dd></dl>
+
+<p class="rubric">Port modes</p>
+<p id="port-constants-modes">These constants can be used with the <a class="reference internal" href="class_port.html#Port" title="Port"><code class="xref py py-class docutils literal notranslate"><span class="pre">Port.mode</span></code></a> method.</p>
+<dl class="py data">
+<dt id="hub.port.MODE_DEFAULT">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">MODE_DEFAULT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#hub.port.MODE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port is Powered Up compatible.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.MODE_FULL_DUPLEX">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">MODE_FULL_DUPLEX</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#hub.port.MODE_FULL_DUPLEX" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port operates as a raw full duplex logic level serial port.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.MODE_HALF_DUPLEX">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">MODE_HALF_DUPLEX</span></code><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#hub.port.MODE_HALF_DUPLEX" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port operates as a raw half duplex differential level serial port.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.port.MODE_GPIO">
+<code class="sig-prename descclassname"><span class="pre">hub.port.</span></code><code class="sig-name descname"><span class="pre">MODE_GPIO</span></code><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#hub.port.MODE_GPIO" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port operates as general input and output <a class="reference internal" href="class_pin.html#Pin" title="Pin"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pin</span></code></a>.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mod_sound.html" class="btn btn-neutral float-right" title="hub.sound – Sound" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mod_motion.html" class="btn btn-neutral float-left" title="hub.motion – Motion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, LEGO System A/S.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

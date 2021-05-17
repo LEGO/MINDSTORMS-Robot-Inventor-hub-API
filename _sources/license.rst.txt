@@ -1,0 +1,4 @@
+Documentation license
+==================================================
+
+.. literalinclude:: ../../LICENSE

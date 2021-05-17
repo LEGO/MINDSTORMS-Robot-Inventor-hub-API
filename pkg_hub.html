@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hub – Top level functions and classes &mdash; hub-api  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hub.battery – Battery" href="mod_battery.html" />
+    <link rel="prev" title="Hub Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hub-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.2.01.0103-d08b6fe
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Hub modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#attributes">Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod_battery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.battery</span></code> – Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.bluetooth</span></code> – Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_button.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.button</span></code> – Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_display.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code> – Display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_motion.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_port.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_sound.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.sound</span></code> – Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_supervision.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.supervision</span></code> – Supervision</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_image.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_bt_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.BT_VCP</span></code> – BT_VCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_usb_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.USB_VCP</span></code> – USB_VCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Instantiated classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_port.html">Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motorpair.html">MotorPair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_pin.html">Pin</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Documentation license</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hub-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-hub">
+<span id="hub-top-level-functions-and-classes"></span><h1><a class="reference internal" href="#module-hub" title="hub"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code></a> – Top level functions and classes<a class="headerlink" href="#module-hub" title="Permalink to this headline">¶</a></h1>
+<p>This is the entry point for using the hub API. The <code class="docutils literal notranslate"><span class="pre">hub</span></code> package contains
+dedicated modules such as <a class="reference internal" href="mod_port.html#module-hub.port" title="hub.port"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code></a> and <a class="reference internal" href="mod_display.html#module-hub.display" title="hub.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code></a>, as shown
+in the menu on the left. It also contains a few attributes, functions, and
+classes, which are documented on this page.</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="py data">
+<dt id="hub.__version__">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">__version__</span></code><a class="headerlink" href="#hub.__version__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The firmware version of the form <code class="docutils literal notranslate"><span class="pre">'v1.0.06.0034-b0c335b'</span></code>, consisting
+of the components:</p>
+<p>v <code class="docutils literal notranslate"><span class="pre">major</span></code> . <code class="docutils literal notranslate"><span class="pre">minor</span></code> . <code class="docutils literal notranslate"><span class="pre">bugfix</span></code> . <code class="docutils literal notranslate"><span class="pre">build</span></code> - <code class="docutils literal notranslate"><span class="pre">hash</span></code>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.config">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">config</span></code><a class="headerlink" href="#hub.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary of hub configuration variables.</p>
+<p>You can override its default values in <code class="docutils literal notranslate"><span class="pre">boot.py</span></code>. You can also add your own
+data. This dictionary is accessible to all of your programs until
+you reboot the hub.</p>
+<p>By default, it has the following entries:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code>: Identifies the hub in various places such as Bluetooth
+advertising. This value is read from <code class="docutils literal notranslate"><span class="pre">/etc/hostname</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lwp_advertise</span></code>: Configures whether the firmware should control BLE
+advertising using the LEGO Wireless Protocol. A positive value enables
+advertising after the given duration (ms) after boot. Set to 0 to disable
+advertising.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bt_discoverable</span></code>: Configures whether the hub should be discoverable with
+Bluetooth classic. A positive value makes it discoverable after the given
+duration after boot. Set to 0 to disable discoverability.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disconnect_behavior_enabled</span></code>: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, hub shuts down
+automatically after some time if no Bluetooth connection is made.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lwp_bypass</span></code>: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the firmware will not process LEGO Wireless
+Protocol commands. It is <code class="docutils literal notranslate"><span class="pre">False</span></code> by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disable_usb_poweron</span></code>: If this key exists, the hub will not start up again
+if USB is connected after shutdown.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">powerdown_timeout</span></code>: Sets the inactivity timeout (ms) before the hub
+shuts down. Set to <code class="docutils literal notranslate"><span class="pre">0</span></code> to disable automatic shutdown.</p></li>
+</ul>
+</dd></dl>
+
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="hub.info">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#hub.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a dictionary of the form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="c1"># System performance information.</span>
+    <span class="s1">&#39;1ms_tick_min&#39;</span><span class="p">:</span> <span class="mf">329000.0</span><span class="p">,</span>
+    <span class="s1">&#39;1ms_tick_on_time&#39;</span><span class="p">:</span> <span class="mf">99.9991</span><span class="p">,</span>
+    <span class="s1">&#39;1ms_tick_miss&#39;</span><span class="p">:</span> <span class="mi">131</span><span class="p">,</span>
+    <span class="s1">&#39;1ms_tick_max&#39;</span><span class="p">:</span> <span class="mf">7.32e+06</span><span class="p">,</span>
+    <span class="s1">&#39;1ms_tick_total&#39;</span><span class="p">:</span> <span class="mi">14702993</span><span class="p">,</span>
+
+    <span class="c1"># Product variant.</span>
+    <span class="c1"># SPIKE Prime Hub = 0</span>
+    <span class="c1"># MINDSTORMS Inventor Hub = 1</span>
+    <span class="s1">&#39;product_variant&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+
+    <span class="c1"># PCB version.</span>
+    <span class="s1">&#39;hardware_version&#39;</span><span class="p">:</span> <span class="s1">&#39;Version_E&#39;</span><span class="p">,</span>
+
+    <span class="c1"># Unique identifier of your hub.</span>
+    <span class="s1">&#39;device_uuid&#39;</span><span class="p">:</span> <span class="s1">&#39;03970000-3B00-3B00-1451-383332353732&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Hub information dictionary similar to the example above.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.status">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">status</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#hub.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the state of internal sensors, external devices, and the display.</p>
+<p>This gives a dictionary equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s1">&#39;gyroscope&#39;</span><span class="p">:</span> <span class="n">motion</span><span class="o">.</span><span class="n">gyroscope</span><span class="p">(),</span>
+    <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="n">motion</span><span class="o">.</span><span class="n">position</span><span class="p">(),</span>
+    <span class="s1">&#39;accelerometer&#39;</span><span class="p">:</span> <span class="n">motion</span><span class="o">.</span><span class="n">accelerometer</span><span class="p">(),</span>
+    <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">port</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+        <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">port</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+        <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="n">port</span><span class="o">.</span><span class="n">C</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+        <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="n">port</span><span class="o">.</span><span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+        <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="n">port</span><span class="o">.</span><span class="n">E</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+        <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="n">port</span><span class="o">.</span><span class="n">F</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;display&#39;</span><span class="p">:</span> <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Further details can be obtained on the <a class="reference internal" href="mod_motion.html#module-hub.motion" title="hub.motion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code></a>,
+<a class="reference internal" href="mod_display.html#module-hub.display" title="hub.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code></a>, and <a class="reference internal" href="class_port.html#Port" title="Port"><code class="xref py py-class docutils literal notranslate"><span class="pre">Port</span></code></a> pages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Status dictionary as given above.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.power_off">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">power_off</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fast</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">restart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.power_off" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">power_off</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Turns the hub off, or sets a timeout to turn off after inactivity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fast</strong> – Select <code class="docutils literal notranslate"><span class="pre">True</span></code> for fast shut down, without the usual light
+animation and sound.</p></li>
+<li><p><strong>restart</strong> – Select <code class="docutils literal notranslate"><span class="pre">True</span></code> to reboot after shutting down.</p></li>
+<li><p><strong>timeout</strong> – Sets the inactivity timeout before the hub shuts down
+automatically.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.repl_restart">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">repl_restart</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">restart</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.repl_restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the REPL and clears all variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>restart</strong> – Select <code class="docutils literal notranslate"><span class="pre">True</span></code> to restart. If this argument is <code class="docutils literal notranslate"><span class="pre">False</span></code> or
+not given at all, nothing happens.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.temperature">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">temperature</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">float</span><a class="headerlink" href="#hub.temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the temperature of the hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The temperature in degrees Celsius.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.led">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">led</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.led" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">led</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">led</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Sets the color of the LED in the center button of the hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>color</strong> – <p>Choose one of these formats:</p>
+<ul>
+<li><p>Color code:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> = off</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = pink</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = violet</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> = blue</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> = turquoise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> = light green</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> = green</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span></code> = yellow</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8</span></code> = orange</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">9</span></code> = red</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> = white</p></li>
+<li><p>Any other value gives dim white light.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>RGB mode: You provide the intensity for red, green, and blue
+light separately. Each value must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">255</span></code>.</p></li>
+<li><p>Tuple mode. This works just like RGB mode, but you can provide
+all three values in a single tuple.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.file_transfer">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">file_transfer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filesize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packetsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.file_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepares a file transfer to the hub.</p>
+<p>After calling this function, press <code class="docutils literal notranslate"><span class="pre">CTRL+F</span></code> or send <code class="docutils literal notranslate"><span class="pre">\x06</span></code> to start
+the actual transfer. Bytes sent after this will be written to the specified
+file on the hub. Once the transfer is complete or fails, the REPL resumes
+control.</p>
+<p>Auto-detection of transfer interface (USB or Bluetooth) is enabled.
+The first interface that receives a good package within the specified
+timeout, will be used for the rest of the transfer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – Absolute path to the file. The containing folder must already
+exist.</p></li>
+<li><p><strong>filesize</strong> – Size of the file to be transferred, expressed as a number of
+bytes. The size must not exceed the remaining amount of storage
+space.</p></li>
+<li><p><strong>packetsize</strong> – Size of each packet. The packet is not written until it is
+received in full.</p></li>
+<li><p><strong>mode</strong> – String with optional file transfer settings. Choose <code class="docutils literal notranslate"><span class="pre">'a'</span></code> to
+make the hub send <code class="docutils literal notranslate"><span class="pre">ACK</span></code> or <code class="docutils literal notranslate"><span class="pre">NAK</span></code> after each packet. Doing so is
+recommended for USB transfers but not for Bluetooth Classic
+transfers.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>OSError</strong><strong> (</strong><strong>ETIMEDOUT</strong><strong>)</strong> – If the transfer was started but the expected
+    data was not received within the timeout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<dl class="py data">
+<dt id="hub.TOP">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">TOP</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#hub.TOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>The top of the hub. This is the side with the matrix display.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.FRONT">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">FRONT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#hub.FRONT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The front of the hub. This is the side with the USB port.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.RIGHT">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">RIGHT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#hub.RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The right side of the hub. This is the side with ports B, D, and F.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.BOTTOM">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">BOTTOM</span></code><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#hub.BOTTOM" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bottom side of the hub. This is the side of the battery compartment.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.BACK">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">BACK</span></code><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#hub.BACK" title="Permalink to this definition">¶</a></dt>
+<dd><p>The back side of the hub. This is the side with the speaker.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.LEFT">
+<code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">LEFT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#hub.LEFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The left side of the hub. This is the side with ports A, C, and E.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mod_battery.html" class="btn btn-neutral float-right" title="hub.battery – Battery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Hub Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, LEGO System A/S.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

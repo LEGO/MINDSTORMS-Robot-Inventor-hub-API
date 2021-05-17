@@ -1,0 +1,74 @@
+:mod:`hub.motion <hub.motion>` -- Motion
+==============================================================
+
+.. module:: hub.motion
+
+The motion module lets you access the 6-degree of freedom MEMS sensor in
+the hub. You can measure the hub acceleration, angular velocity, and
+orientation. You can also detect certain motion events such as free fall.
+
+The default orientation of the hub is horizontal, with the lights and buttons
+on top and the USB charging port facing forward. For example, this is how the
+hub is mounted in a vehicle robot such as TRICKY.
+
+To understand the directions of motion, it can be helpful to imagine that you
+are sitting in the hub, as the driver of the vehicle:
+
+- Yaw: Positive values up to 179 degrees mean that the car has steered to the
+  right. Negative values down to -180 mean you have steered to the left.
+- Pitch: Positive means you are driving up a hill, so that the front of the car
+  points upward, up to 90 degrees. Negative means you are driving downhill,
+  down to -90 degrees.
+- Roll: Positive values up to 179 degrees means your car is leaning to the
+  right, as if driving only on its right wheels. Negative values down to -180
+  mean your car is leaning to the left, as if driving on its left wheels.
+
+Using the same analogy as a driver in your car, the following applies about
+axes and acceleration values:
+
+- The positive X axis points to the right of your car: A positive acceleration
+  along the X axis means you are accelerating to the right. Negative means to
+  the left.
+- The positive Y axis points to the front of your car: A positive acceleration
+  along the Y axis means you are accelerating forward, as if pressing the gas.
+  Negative means backward, as if hitting the brakes or reversing.
+- The positive Z axis points up. A positive acceleration along the Z axis means
+  that you are accelerating upward. Negative means downward.
+
+Likewise, the following applies for angular velocity:
+
+- A positive angular rate velocity the X axis means you are tilting upward.
+- A positive angular rate velocity the Y axis mean you are rolling to the
+  right.
+- A positive angular rate velocity the Z axis mean you are steering to the
+  left.
+
+You can specify how the hub is aligned in your model using
+the :func:`hub.motion.align_to_model` function.
+This way, the values will be adjusted such that the analogies above still apply
+even if your hub isn't mounted horizontally in your model.
+
+.. autofunction:: hub.motion.accelerometer
+
+.. autofunction:: hub.motion.gyroscope
+
+.. autofunction:: hub.motion.align_to_model
+
+.. autofunction:: hub.motion.yaw_pitch_roll
+
+.. autofunction:: hub.motion.orientation
+
+.. autofunction:: hub.motion.gesture
+
+Constants
+^^^^^^^^^
+
+These values are used by the :func:`hub.motion.gesture` function.
+
+.. autodata:: hub.motion.TAPPED
+
+.. autodata:: hub.motion.DOUBLETAPPED
+
+.. autodata:: hub.motion.SHAKE
+
+.. autodata:: hub.motion.FREEFALL

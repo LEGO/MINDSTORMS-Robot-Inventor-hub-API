@@ -1,0 +1,39 @@
+MotorPair
+==================================================
+
+This class can be used to control pairs of motors. You create ``MotorPair``
+objects using the ``pair()`` method of a :class:`Motor` object.
+
+.. class:: MotorPair
+
+    Control two motors simultaneously in a synchronized way.
+
+    .. automethod:: hub.port.MotorPair.id
+
+    .. automethod:: hub.port.MotorPair.primary
+
+    .. automethod:: hub.port.MotorPair.secondary
+
+    .. automethod:: hub.port.MotorPair.unpair
+
+    .. automethod:: hub.port.MotorPair.float
+
+    .. automethod:: hub.port.MotorPair.brake
+
+    .. automethod:: hub.port.MotorPair.hold
+
+    .. automethod:: hub.port.MotorPair.pwm
+
+    .. automethod:: hub.port.MotorPair.run_at_speed
+
+    .. automethod:: hub.port.MotorPair.run_for_time
+
+    .. automethod:: hub.port.MotorPair.run_for_degrees
+
+    .. automethod:: hub.port.MotorPair.run_to_position
+
+    .. automethod:: hub.port.MotorPair.preset
+
+    .. automethod:: hub.port.MotorPair.callback
+
+    .. automethod:: hub.port.MotorPair.pid

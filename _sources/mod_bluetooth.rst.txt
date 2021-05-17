@@ -1,0 +1,18 @@
+:mod:`hub.bluetooth <hub.bluetooth>` -- Bluetooth
+==============================================================
+
+.. automodule:: hub.bluetooth
+
+.. autofunction:: hub.bluetooth.discoverable
+
+.. autofunction:: hub.bluetooth.info
+
+.. autofunction:: hub.bluetooth.forget
+
+.. rubric:: Functions for the LEGO Wireless Protocol
+
+.. autofunction:: hub.bluetooth.lwp_advertise
+
+.. autofunction:: hub.bluetooth.lwp_bypass
+
+.. autofunction:: hub.bluetooth.lwp_monitor

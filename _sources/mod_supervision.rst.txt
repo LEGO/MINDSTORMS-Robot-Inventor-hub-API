@@ -1,0 +1,8 @@
+:mod:`hub.supervision <hub.supervision>` -- Supervision
+==============================================================
+
+.. automodule:: hub.supervision
+
+.. autofunction:: hub.supervision.info
+
+.. autofunction:: hub.supervision.callback

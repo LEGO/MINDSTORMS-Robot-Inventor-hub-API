@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hub.motion – Motion &mdash; hub-api  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hub.port – Port" href="mod_port.html" />
+    <link rel="prev" title="hub.display – Display" href="mod_display.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hub-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.2.01.0103-d08b6fe
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Hub modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pkg_hub.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_battery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.battery</span></code> – Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.bluetooth</span></code> – Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_button.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.button</span></code> – Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_display.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code> – Display</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#constants">Constants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod_port.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_sound.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.sound</span></code> – Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_supervision.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.supervision</span></code> – Supervision</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_image.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_bt_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.BT_VCP</span></code> – BT_VCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_usb_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.USB_VCP</span></code> – USB_VCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Instantiated classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_port.html">Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motorpair.html">MotorPair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_pin.html">Pin</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Documentation license</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hub-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-hub.motion">
+<span id="hub-motion-motion"></span><h1><a class="reference internal" href="#module-hub.motion" title="hub.motion"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code></a> – Motion<a class="headerlink" href="#module-hub.motion" title="Permalink to this headline">¶</a></h1>
+<p>The motion module lets you access the 6-degree of freedom MEMS sensor in
+the hub. You can measure the hub acceleration, angular velocity, and
+orientation. You can also detect certain motion events such as free fall.</p>
+<p>The default orientation of the hub is horizontal, with the lights and buttons
+on top and the USB charging port facing forward. For example, this is how the
+hub is mounted in a vehicle robot such as TRICKY.</p>
+<p>To understand the directions of motion, it can be helpful to imagine that you
+are sitting in the hub, as the driver of the vehicle:</p>
+<ul class="simple">
+<li><p>Yaw: Positive values up to 179 degrees mean that the car has steered to the
+right. Negative values down to -180 mean you have steered to the left.</p></li>
+<li><p>Pitch: Positive means you are driving up a hill, so that the front of the car
+points upward, up to 90 degrees. Negative means you are driving downhill,
+down to -90 degrees.</p></li>
+<li><p>Roll: Positive values up to 179 degrees means your car is leaning to the
+right, as if driving only on its right wheels. Negative values down to -180
+mean your car is leaning to the left, as if driving on its left wheels.</p></li>
+</ul>
+<p>Using the same analogy as a driver in your car, the following applies about
+axes and acceleration values:</p>
+<ul class="simple">
+<li><p>The positive X axis points to the right of your car: A positive acceleration
+along the X axis means you are accelerating to the right. Negative means to
+the left.</p></li>
+<li><p>The positive Y axis points to the front of your car: A positive acceleration
+along the Y axis means you are accelerating forward, as if pressing the gas.
+Negative means backward, as if hitting the brakes or reversing.</p></li>
+<li><p>The positive Z axis points up. A positive acceleration along the Z axis means
+that you are accelerating upward. Negative means downward.</p></li>
+</ul>
+<p>Likewise, the following applies for angular velocity:</p>
+<ul class="simple">
+<li><p>A positive angular rate velocity the X axis means you are tilting upward.</p></li>
+<li><p>A positive angular rate velocity the Y axis mean you are rolling to the
+right.</p></li>
+<li><p>A positive angular rate velocity the Z axis mean you are steering to the
+left.</p></li>
+</ul>
+<p>You can specify how the hub is aligned in your model using
+the <a class="reference internal" href="#hub.motion.align_to_model" title="hub.motion.align_to_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">hub.motion.align_to_model()</span></code></a> function.
+This way, the values will be adjusted such that the analogies above still apply
+even if your hub isn’t mounted horizontally in your model.</p>
+<dl class="py function">
+<dt id="hub.motion.accelerometer">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">accelerometer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filtered</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#hub.motion.accelerometer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the acceleration of the hub along the x, y, and z axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filtered</strong> – Selecting <code class="docutils literal notranslate"><span class="pre">True</span></code> gives a more stable value, but it is
+delayed by 10-100 milliseconds. Selecting <code class="docutils literal notranslate"><span class="pre">False</span></code> gives the
+unfiltered value.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Acceleration of the hub with units of <code class="docutils literal notranslate"><span class="pre">cm/s^2</span></code>. On a perfectly
+level surface, this gives <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">981)</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.motion.gyroscope">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">gyroscope</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filtered</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#hub.motion.gyroscope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the angular velocity of the hub along the x, y, and z axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filtered</strong> – Selecting <code class="docutils literal notranslate"><span class="pre">True</span></code> gives a more stable value, but it is
+delayed by 10-100 milliseconds. Selecting <code class="docutils literal notranslate"><span class="pre">False</span></code> gives the
+unfiltered value.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Angular velocity with units of degrees per second.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.motion.align_to_model">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">align_to_model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">front</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.motion.align_to_model" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">align_to_model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsamples</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">align_to_model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">front</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsamples</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Sets the default hub orientation and/or calibrates the gyroscope.</p>
+<p>The hub must not move while calibrating. It takes about one second by
+default.</p>
+<p>Changing the model alignment affects most other methods in this module.
+They will now be relative to the hub alignment that you specify.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>top</strong> – Which hub side is at the top of your model. See the
+hub <a class="reference internal" href="pkg_hub.html#hub.TOP" title="hub.TOP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">constants</span></code></a> for all possible values.</p></li>
+<li><p><strong>front</strong> – Which hub side is on the front of your model.</p></li>
+<li><p><strong>nsamples</strong> – Number of samples for calibration between 0 and 10000. It is
+100 by default.</p></li>
+<li><p><strong>callback</strong> – Function that will be called when calibration is complete.
+It must accept one argument. Choose <code class="docutils literal notranslate"><span class="pre">None</span></code> to disable
+the callback. This is the default.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.motion.yaw_pitch_roll">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">yaw_pitch_roll</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#hub.motion.yaw_pitch_roll" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">yaw_pitch_roll</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw_preset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">yaw_pitch_roll</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaw_correction</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Gets the yaw, pitch, and roll angles of the hub, or resets the yaw.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">yaw_correction</span></code> is an optional keyword argument to improve the
+accuracy of the yaw value after one full turn. To use it:</p>
+<ul class="simple">
+<li><p>Reset the yaw angle to zero using <code class="docutils literal notranslate"><span class="pre">hub.motion.yaw_pitch_roll(0)</span></code>.</p></li>
+<li><p>Rotate the hub smoothly exactly one rotation clockwise.</p></li>
+<li><p>Call <code class="docutils literal notranslate"><span class="pre">error</span> <span class="pre">=</span> <span class="pre">hub.motion.yaw_pitch_roll()[0]</span></code> to get the yaw error.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">error</span></code> should be <code class="docutils literal notranslate"><span class="pre">0</span></code>. If it is not, you can set the correction
+using <code class="docutils literal notranslate"><span class="pre">hub.motion.yaw_pitch_roll(yaw_correction=error)</span></code>.</p></li>
+<li><p>For even more accuracy, you can turn clockwise 5 times, and use
+<code class="docutils literal notranslate"><span class="pre">error</span> <span class="pre">/</span> <span class="pre">5</span></code> as the correction factor.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>yaw_preset</strong> – Sets the current yaw to the given value (-180 to 179).</p></li>
+<li><p><strong>yaw_correction</strong> – Adjusts the gain of the yaw axis values. See the
+yaw adjustment section below.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>If no arguments are given, this returns a tuple of yaw, pitch, and roll
+values in degrees.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.motion.orientation">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">orientation</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#hub.motion.orientation" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">orientation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span></dt>
+<dd><p>Gets which hub side of the hub is mostly pointing up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>callback</strong> – Function that will be called when the orientation changes.
+It must accept one argument, which will tell you which hub side is
+up. Choose <code class="docutils literal notranslate"><span class="pre">None</span></code> to disable the callback. This is the default.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number representing which side is up. See
+hub <a class="reference internal" href="pkg_hub.html#hub.TOP" title="hub.TOP"><code class="xref py py-attr docutils literal notranslate"><span class="pre">constants</span></code></a> for all possible values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.motion.gesture">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">gesture</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#hub.motion.gesture" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">gesture</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span></dt>
+<dd><p>Gets the most recent gesture that the hub has made since this function
+was last called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Keyword Arguments</dt>
+<dd class="field-odd"><p><strong>callback</strong> – Function that will be called when a gesture is detected.
+It must accept one argument, which will tell you which gesture was
+detected. Choose <code class="docutils literal notranslate"><span class="pre">None</span></code> to disable the callback.
+This is the default.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number representing the gesture. See
+motion <a class="reference internal" href="#hub.motion.TAPPED" title="hub.motion.TAPPED"><code class="xref py py-attr docutils literal notranslate"><span class="pre">constants</span></code></a> for all possible values.
+If no gesture was detected since this function was last called, it
+returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<p>These values are used by the <a class="reference internal" href="#hub.motion.gesture" title="hub.motion.gesture"><code class="xref py py-func docutils literal notranslate"><span class="pre">hub.motion.gesture()</span></code></a> function.</p>
+<dl class="py data">
+<dt id="hub.motion.TAPPED">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">TAPPED</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#hub.motion.TAPPED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hub was tapped.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.motion.DOUBLETAPPED">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">DOUBLETAPPED</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#hub.motion.DOUBLETAPPED" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hub was quickly tapped twice.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.motion.SHAKE">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">SHAKE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#hub.motion.SHAKE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hub was shaken.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="hub.motion.FREEFALL">
+<code class="sig-prename descclassname"><span class="pre">hub.motion.</span></code><code class="sig-name descname"><span class="pre">FREEFALL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#hub.motion.FREEFALL" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hub fell.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mod_port.html" class="btn btn-neutral float-right" title="hub.port – Port" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mod_display.html" class="btn btn-neutral float-left" title="hub.display – Display" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, LEGO System A/S.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

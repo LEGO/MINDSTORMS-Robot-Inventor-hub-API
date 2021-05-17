@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Device &mdash; hub-api  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Motor" href="class_motor.html" />
+    <link rel="prev" title="Port" href="class_port.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hub-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.2.01.0103-d08b6fe
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Hub modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pkg_hub.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_battery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.battery</span></code> – Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.bluetooth</span></code> – Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_button.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.button</span></code> – Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_display.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code> – Display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_motion.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_port.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_sound.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.sound</span></code> – Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_supervision.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.supervision</span></code> – Supervision</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_image.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_bt_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.BT_VCP</span></code> – BT_VCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_usb_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.USB_VCP</span></code> – USB_VCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Instantiated classes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="class_port.html">Port</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motorpair.html">MotorPair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_pin.html">Pin</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Documentation license</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hub-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Device</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="device">
+<h1>Device<a class="headerlink" href="#device" title="Permalink to this headline">¶</a></h1>
+<p>This class is the blueprint for the device attributes of the ports in the
+<a class="reference internal" href="mod_port.html#module-hub.port" title="hub.port"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code></a> module, which in turn are instances of the <a class="reference internal" href="class_port.html#Port" title="Port"><code class="xref py py-class docutils literal notranslate"><span class="pre">Port</span></code></a> class.
+You cannot import or instantiate this class manually.</p>
+<dl class="py class">
+<dt id="Device">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">Device</span></code><a class="headerlink" href="#Device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read values from a Powered Up device and configure its modes.</p>
+<p class="rubric">Methods</p>
+<dl class="py method">
+<dt id="hub.port.Device.get">
+<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#hub.port.Device.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the values that the active device
+<a class="reference internal" href="#hub.port.Device.mode" title="hub.port.Device.mode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mode</span></code></a> provides.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>format</strong> – Format of the data. Choose
+<a class="reference internal" href="#hub.port.Device.FORMAT_RAW" title="hub.port.Device.FORMAT_RAW"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FORMAT_RAW</span></code></a>,
+<a class="reference internal" href="#hub.port.Device.FORMAT_PCT" title="hub.port.Device.FORMAT_PCT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FORMAT_PCT</span></code></a>, or
+<a class="reference internal" href="#hub.port.Device.FORMAT_SI" title="hub.port.Device.FORMAT_SI"><code class="xref py py-attr docutils literal notranslate"><span class="pre">FORMAT_SI</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Values or measurements representing the device state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.Device.mode">
+<code class="sig-name descname"><span class="pre">mode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.Device.mode" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">mode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">mode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">mode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></dt>
+<dd><p>Configures the device mode or multi-mode.</p>
+<p>Most Powered Up devices can work in different modes. Each mode makes it
+do or measure different things. After selecting one mode or a list of
+modes, the corresponding measured values are accessible via the
+<a class="reference internal" href="#hub.port.Device.get" title="hub.port.Device.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get</span></code></a> method.</p>
+<p>Each mode can provide one or more values. For each mode in a multi-mode
+list, you must select which value of that mode you want.
+For example, to read value <code class="docutils literal notranslate"><span class="pre">0</span></code> of mode <code class="docutils literal notranslate"><span class="pre">0</span></code> as well as values <code class="docutils literal notranslate"><span class="pre">2</span></code>
+and <code class="docutils literal notranslate"><span class="pre">3</span></code> of mode <code class="docutils literal notranslate"><span class="pre">5</span></code>, the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument
+is: <code class="docutils literal notranslate"><span class="pre">[(0,</span> <span class="pre">0),</span> <span class="pre">(5,</span> <span class="pre">2),</span> <span class="pre">(5,</span> <span class="pre">3)]</span></code>.
+See <a class="reference internal" href="class_port.html#hub.port.Port.info" title="hub.port.Port.info"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Port.info</span></code></a> to learn
+which modes can be combined.</p>
+<p>Incorrect arguments or incompatible mode settings will be ignored
+without errors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> – A single mode integer or a list of multi-mode tuples.</p></li>
+<li><p><strong>data</strong> – Data to write to the selected mode. When using this argument,
+<code class="docutils literal notranslate"><span class="pre">modes</span></code> must be a single integer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>When setting the mode, it returns <code class="docutils literal notranslate"><span class="pre">None</span></code>. If you don’t give any
+arguments, this returns the currently active mode.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.Device.pwm">
+<code class="sig-name descname"><span class="pre">pwm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.Device.pwm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a PWM signal to the power pins of the port or device.</p>
+<p>A PWM value of 0 has the same effect
+as <a class="reference internal" href="class_motor.html#hub.port.Motor.float" title="hub.port.Motor.float"><code class="xref py py-meth docutils literal notranslate"><span class="pre">float()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – PWM value between -100 and +100.
+The polarity of the PWM signal matches the sign of the value.
+A value of 0 stops the PWM signal and leaves the port driver
+in the floating state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.Device.write_direct">
+<code class="sig-name descname"><span class="pre">write_direct</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.Device.write_direct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message to the device using the wired Powered Up protocol.</p>
+<p>The data must be formatted using the Powered Up specification, which
+may include a command or message type and a payload.
+The required checksum will be added automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – The Powered Up data message. Must not exceed 9 bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Constants</p>
+<dl class="py attribute">
+<dt id="hub.port.Device.FORMAT_RAW">
+<code class="sig-name descname"><span class="pre">FORMAT_RAW</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#hub.port.Device.FORMAT_RAW" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data has no particular unit.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="hub.port.Device.FORMAT_PCT">
+<code class="sig-name descname"><span class="pre">FORMAT_PCT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#hub.port.Device.FORMAT_PCT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data is a percentage.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="hub.port.Device.FORMAT_SI">
+<code class="sig-name descname"><span class="pre">FORMAT_SI</span></code><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#hub.port.Device.FORMAT_SI" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data has SI units, if available.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="class_motor.html" class="btn btn-neutral float-right" title="Motor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_port.html" class="btn btn-neutral float-left" title="Port" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, LEGO System A/S.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

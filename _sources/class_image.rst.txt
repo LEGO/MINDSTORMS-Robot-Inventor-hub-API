@@ -1,0 +1,166 @@
+:class:`hub.Image <hub.Image>` -- Image
+==================================================
+
+The ``Image`` class lets you create and modify images that you can show
+on the hub matrix display using the :mod:`hub.display` module.
+
+.. autoclass:: hub.Image
+    :members:
+
+    .. automethod:: hub.Image.width
+
+    .. automethod:: hub.Image.height
+
+    .. automethod:: hub.Image.shift_left
+
+    .. automethod:: hub.Image.shift_right
+
+    .. automethod:: hub.Image.shift_up
+
+    .. automethod:: hub.Image.shift_down
+
+    .. automethod:: hub.Image.get_pixel
+
+    .. automethod:: hub.Image.set_pixel
+
+.. rubric:: Built-in images
+
+.. autodata:: hub.Image.ANGRY
+
+.. autodata:: hub.Image.ARROW_E
+
+.. autodata:: hub.Image.ARROW_N
+
+.. autodata:: hub.Image.ARROW_NE
+
+.. autodata:: hub.Image.ARROW_NW
+
+.. autodata:: hub.Image.ARROW_S
+
+.. autodata:: hub.Image.ARROW_SE
+
+.. autodata:: hub.Image.ARROW_SW
+
+.. autodata:: hub.Image.ARROW_W
+
+.. autodata:: hub.Image.ASLEEP
+
+.. autodata:: hub.Image.BUTTERFLY
+
+.. autodata:: hub.Image.CHESSBOARD
+
+.. autodata:: hub.Image.CLOCK1
+
+.. autodata:: hub.Image.CLOCK2
+
+.. autodata:: hub.Image.CLOCK3
+
+.. autodata:: hub.Image.CLOCK4
+
+.. autodata:: hub.Image.CLOCK5
+
+.. autodata:: hub.Image.CLOCK6
+
+.. autodata:: hub.Image.CLOCK7
+
+.. autodata:: hub.Image.CLOCK8
+
+.. autodata:: hub.Image.CLOCK9
+
+.. autodata:: hub.Image.CLOCK10
+
+.. autodata:: hub.Image.CLOCK11
+
+.. autodata:: hub.Image.CLOCK12
+
+.. autodata:: hub.Image.CONFUSED
+
+.. autodata:: hub.Image.COW
+
+.. autodata:: hub.Image.DIAMOND
+
+.. autodata:: hub.Image.DIAMOND_SMALL
+
+.. autodata:: hub.Image.DUCK
+
+.. autodata:: hub.Image.FABULOUS
+
+.. autodata:: hub.Image.GHOST
+
+.. autodata:: hub.Image.GIRAFFE
+
+.. autodata:: hub.Image.GO_DOWN
+
+.. autodata:: hub.Image.GO_LEFT
+
+.. autodata:: hub.Image.GO_RIGHT
+
+.. autodata:: hub.Image.GO_UP
+
+.. autodata:: hub.Image.HAPPY
+
+.. autodata:: hub.Image.HEART
+
+.. autodata:: hub.Image.HEART_SMALL
+
+.. autodata:: hub.Image.HOUSE
+
+.. autodata:: hub.Image.MEH
+
+.. autodata:: hub.Image.MUSIC_CROTCHET
+
+.. autodata:: hub.Image.MUSIC_QUAVER
+
+.. autodata:: hub.Image.MUSIC_QUAVERS
+
+.. autodata:: hub.Image.NO
+
+.. autodata:: hub.Image.PACMAN
+
+.. autodata:: hub.Image.PITCHFORK
+
+.. autodata:: hub.Image.RABBIT
+
+.. autodata:: hub.Image.ROLLERSKATE
+
+.. autodata:: hub.Image.SAD
+
+.. autodata:: hub.Image.SILLY
+
+.. autodata:: hub.Image.SKULL
+
+.. autodata:: hub.Image.SMILE
+
+.. autodata:: hub.Image.SNAKE
+
+.. autodata:: hub.Image.SQUARE
+
+.. autodata:: hub.Image.SQUARE_SMALL
+
+.. autodata:: hub.Image.STICKFIGURE
+
+.. autodata:: hub.Image.SURPRISED
+
+.. autodata:: hub.Image.SWORD
+
+.. autodata:: hub.Image.TARGET
+
+.. autodata:: hub.Image.TORTOISE
+
+.. autodata:: hub.Image.TRIANGLE
+
+.. autodata:: hub.Image.TRIANGLE_LEFT
+
+.. autodata:: hub.Image.TSHIRT
+
+.. autodata:: hub.Image.UMBRELLA
+
+.. autodata:: hub.Image.XMAS
+
+.. autodata:: hub.Image.YES
+
+.. rubric:: Built-in tuples of images
+
+.. autoattribute:: hub.Image.ALL_CLOCKS
+
+.. autoattribute:: hub.Image.ALL_ARROWS

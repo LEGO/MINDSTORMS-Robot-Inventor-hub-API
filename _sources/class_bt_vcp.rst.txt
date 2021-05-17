@@ -1,0 +1,31 @@
+:class:`hub.BT_VCP <hub.BT_VCP>` -- BT_VCP
+==================================================
+
+This class allows you to send and receive data from another device using
+Bluetooth.
+
+.. autoclass:: hub.BT_VCP
+
+    .. automethod:: hub.BT_VCP.setinterrupt
+
+    .. automethod:: hub.BT_VCP.isconnected
+
+    .. automethod:: hub.BT_VCP.any
+
+    .. automethod:: hub.BT_VCP.close
+
+    .. automethod:: hub.BT_VCP.read
+
+    .. automethod:: hub.BT_VCP.readinto
+
+    .. automethod:: hub.BT_VCP.readline
+
+    .. automethod:: hub.BT_VCP.readlines
+
+    .. automethod:: hub.BT_VCP.write
+
+    .. automethod:: hub.BT_VCP.recv
+
+    .. automethod:: hub.BT_VCP.send
+
+    .. automethod:: hub.BT_VCP.callback

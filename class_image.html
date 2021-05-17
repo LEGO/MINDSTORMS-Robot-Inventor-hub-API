@@ -1,0 +1,723 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>hub.Image – Image &mdash; hub-api  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hub.BT_VCP – BT_VCP" href="class_bt_vcp.html" />
+    <link rel="prev" title="hub.supervision – Supervision" href="mod_supervision.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hub-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.2.01.0103-d08b6fe
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Hub modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pkg_hub.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_battery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.battery</span></code> – Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.bluetooth</span></code> – Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_button.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.button</span></code> – Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_display.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code> – Display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_motion.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_port.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_sound.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.sound</span></code> – Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_supervision.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.supervision</span></code> – Supervision</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User classes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_bt_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.BT_VCP</span></code> – BT_VCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_usb_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.USB_VCP</span></code> – USB_VCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Instantiated classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_port.html">Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motor.html">Motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motorpair.html">MotorPair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_pin.html">Pin</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Documentation license</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hub-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hub-image-image">
+<h1><a class="reference internal" href="#hub.Image" title="hub.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code></a> – Image<a class="headerlink" href="#hub-image-image" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">Image</span></code> class lets you create and modify images that you can show
+on the hub matrix display using the <a class="reference internal" href="mod_display.html#module-hub.display" title="hub.display"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code></a> module.</p>
+<dl class="py class">
+<dt id="hub.Image">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">Image</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hub.Image" title="Permalink to this definition">¶</a></dt>
+<dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">Image</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span></dt>
+<dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">Image</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Create a new image object for use with
+the <a class="reference internal" href="mod_display.html#hub.display.show" title="hub.display.show"><code class="xref py py-func docutils literal notranslate"><span class="pre">hub.display.show()</span></code></a> function.</p>
+<p>You can use one of the signatures above to initialize an image,
+depending on what you need.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> – String of the
+form <code class="docutils literal notranslate"><span class="pre">&quot;00900:09990:99999:09990:09090:&quot;</span></code>, representing the
+brightness of each pixel (0 to 9). Pixels are listed row
+by row, separated by a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) or line break (<code class="docutils literal notranslate"><span class="pre">\n</span></code>).</p></li>
+<li><p><strong>width</strong> – Number of pixels in one row of the new image.</p></li>
+<li><p><strong>height</strong> – Number of pixels in one column of the new image.</p></li>
+<li><p><strong>buffer</strong> – Bytes representing the brightness values of each pixel in
+the new image. The buffer size must be equal
+to <code class="docutils literal notranslate"><span class="pre">width</span></code> * <code class="docutils literal notranslate"><span class="pre">height</span></code>. If you give a with and height but
+no buffer, you will get an image where all pixels are zero.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="hub.Image.width">
+<code class="sig-name descname"><span class="pre">width</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#hub.Image.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the width of the image as a number of pixels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.height">
+<code class="sig-name descname"><span class="pre">height</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#hub.Image.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the width of the image as a number of pixels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.shift_left">
+<code class="sig-name descname"><span class="pre">shift_left</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a><a class="headerlink" href="#hub.Image.shift_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts the image to the left.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – By how many pixels to shift the image.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new, shifted image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.shift_right">
+<code class="sig-name descname"><span class="pre">shift_right</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a><a class="headerlink" href="#hub.Image.shift_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts the image to the right.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – By how many pixels to shift the image.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new, shifted image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.shift_up">
+<code class="sig-name descname"><span class="pre">shift_up</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a><a class="headerlink" href="#hub.Image.shift_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts the image up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – By how many pixels to shift the image.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new, shifted image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.shift_down">
+<code class="sig-name descname"><span class="pre">shift_down</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a><a class="headerlink" href="#hub.Image.shift_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts the image down.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> – By how many pixels to shift the image.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new, shifted image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.get_pixel">
+<code class="sig-name descname"><span class="pre">get_pixel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brightness</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#hub.Image.get_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the brightness of one pixel in the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Pixel position counted from the left, starting at zero.</p></li>
+<li><p><strong>y</strong> – Pixel position counted from the top, starting at zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Brightness (0–9) of the requested pixel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.Image.set_pixel">
+<code class="sig-name descname"><span class="pre">set_pixel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brightness</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.Image.set_pixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the brightness of one pixel in the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – Pixel position counted from the left, starting at zero.</p></li>
+<li><p><strong>y</strong> – Pixel position counted from the top, starting at zero.</p></li>
+<li><p><strong>brightness</strong> – Brightness between <code class="docutils literal notranslate"><span class="pre">0</span></code> (fully off)
+and <code class="docutils literal notranslate"><span class="pre">9</span></code> (fully on).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If x or y are negative or larger than the image size.</p></li>
+<li><p><strong>TypeError</strong> – If you try to modify a built-in image such
+    as <code class="docutils literal notranslate"><span class="pre">hub.Image.HEART</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p class="rubric">Built-in images</p>
+<dl class="py data">
+<dt id="hub.Image.ANGRY">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ANGRY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90009:09090:00000:99999:90909:')</span></em><a class="headerlink" href="#hub.Image.ANGRY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_E">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_E</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:00090:99999:00090:00900:')</span></em><a class="headerlink" href="#hub.Image.ARROW_E" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_N">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_N</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:09990:90909:00900:00900:')</span></em><a class="headerlink" href="#hub.Image.ARROW_N" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_NE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_NE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00999:00099:00909:09000:90000:')</span></em><a class="headerlink" href="#hub.Image.ARROW_NE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_NW">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_NW</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99900:99000:90900:00090:00009:')</span></em><a class="headerlink" href="#hub.Image.ARROW_NW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_S">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_S</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:00900:90909:09990:00900:')</span></em><a class="headerlink" href="#hub.Image.ARROW_S" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_SE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_SE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90000:09000:00909:00099:00999:')</span></em><a class="headerlink" href="#hub.Image.ARROW_SE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_SW">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_SW</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00009:00090:90900:99000:99900:')</span></em><a class="headerlink" href="#hub.Image.ARROW_SW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ARROW_W">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ARROW_W</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:09000:99999:09000:00900:')</span></em><a class="headerlink" href="#hub.Image.ARROW_W" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ASLEEP">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ASLEEP</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:99099:00000:09990:00000:')</span></em><a class="headerlink" href="#hub.Image.ASLEEP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.BUTTERFLY">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">BUTTERFLY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99099:99999:00900:99999:99099:')</span></em><a class="headerlink" href="#hub.Image.BUTTERFLY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CHESSBOARD">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CHESSBOARD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09090:90909:09090:90909:09090:')</span></em><a class="headerlink" href="#hub.Image.CHESSBOARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK1">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK1</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00090:00090:00900:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK2">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK2</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00099:00900:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK3">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK3</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00999:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK4">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK4</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00900:00099:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK5">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK5</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00900:00090:00090:')</span></em><a class="headerlink" href="#hub.Image.CLOCK5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK6">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK6</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00900:00900:00900:')</span></em><a class="headerlink" href="#hub.Image.CLOCK6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK7">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK7</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00900:09000:09000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK8">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK8</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00900:99000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK9">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK9</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:99900:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK10">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK10</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:99000:00900:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK10" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK11">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK11</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09000:09000:00900:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK11" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CLOCK12">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CLOCK12</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:00900:00900:00000:00000:')</span></em><a class="headerlink" href="#hub.Image.CLOCK12" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.CONFUSED">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">CONFUSED</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:09090:00000:09090:90909:')</span></em><a class="headerlink" href="#hub.Image.CONFUSED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.COW">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">COW</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90009:90009:99999:09990:00900:')</span></em><a class="headerlink" href="#hub.Image.COW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.DIAMOND">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">DIAMOND</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:09090:90009:09090:00900:')</span></em><a class="headerlink" href="#hub.Image.DIAMOND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.DIAMOND_SMALL">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">DIAMOND_SMALL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00900:09090:00900:00000:')</span></em><a class="headerlink" href="#hub.Image.DIAMOND_SMALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.DUCK">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">DUCK</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09900:99900:09999:09990:00000:')</span></em><a class="headerlink" href="#hub.Image.DUCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.FABULOUS">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">FABULOUS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99999:99099:00000:09090:09990:')</span></em><a class="headerlink" href="#hub.Image.FABULOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.GHOST">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">GHOST</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99999:90909:99999:99999:90909:')</span></em><a class="headerlink" href="#hub.Image.GHOST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.GIRAFFE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">GIRAFFE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99000:09000:09000:09990:09090:')</span></em><a class="headerlink" href="#hub.Image.GIRAFFE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.GO_DOWN">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">GO_DOWN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:99999:09990:00900:00000:')</span></em><a class="headerlink" href="#hub.Image.GO_DOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.GO_LEFT">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">GO_LEFT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00090:00990:09990:00990:00090:')</span></em><a class="headerlink" href="#hub.Image.GO_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.GO_RIGHT">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">GO_RIGHT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09000:09900:09990:09900:09000:')</span></em><a class="headerlink" href="#hub.Image.GO_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.GO_UP">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">GO_UP</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00900:09990:99999:00000:')</span></em><a class="headerlink" href="#hub.Image.GO_UP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.HAPPY">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">HAPPY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:09090:00000:90009:09990:')</span></em><a class="headerlink" href="#hub.Image.HAPPY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.HEART">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">HEART</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09090:99999:99999:09990:00900:')</span></em><a class="headerlink" href="#hub.Image.HEART" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.HEART_SMALL">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">HEART_SMALL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:09090:09990:00900:00000:')</span></em><a class="headerlink" href="#hub.Image.HEART_SMALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.HOUSE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">HOUSE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:09990:99999:09990:09090:')</span></em><a class="headerlink" href="#hub.Image.HOUSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.MEH">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">MEH</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09090:00000:00090:00900:09000:')</span></em><a class="headerlink" href="#hub.Image.MEH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.MUSIC_CROTCHET">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">MUSIC_CROTCHET</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:00900:00900:99900:99900:')</span></em><a class="headerlink" href="#hub.Image.MUSIC_CROTCHET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.MUSIC_QUAVER">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">MUSIC_QUAVER</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:00990:00909:99900:99900:')</span></em><a class="headerlink" href="#hub.Image.MUSIC_QUAVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.MUSIC_QUAVERS">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">MUSIC_QUAVERS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09999:09009:09009:99099:99099:')</span></em><a class="headerlink" href="#hub.Image.MUSIC_QUAVERS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.NO">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">NO</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90009:09090:00900:09090:90009:')</span></em><a class="headerlink" href="#hub.Image.NO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.PACMAN">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">PACMAN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09999:99090:99900:99990:09999:')</span></em><a class="headerlink" href="#hub.Image.PACMAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.PITCHFORK">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">PITCHFORK</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90909:90909:99999:00900:00900:')</span></em><a class="headerlink" href="#hub.Image.PITCHFORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.RABBIT">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">RABBIT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90900:90900:99990:99090:99990:')</span></em><a class="headerlink" href="#hub.Image.RABBIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.ROLLERSKATE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">ROLLERSKATE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00099:00099:99999:99999:09090:')</span></em><a class="headerlink" href="#hub.Image.ROLLERSKATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SAD">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SAD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:09090:00000:09990:90009:')</span></em><a class="headerlink" href="#hub.Image.SAD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SILLY">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SILLY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90009:00000:99999:00909:00999:')</span></em><a class="headerlink" href="#hub.Image.SILLY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SKULL">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SKULL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09990:90909:99999:09990:09990:')</span></em><a class="headerlink" href="#hub.Image.SKULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SMILE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SMILE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00000:00000:90009:09990:')</span></em><a class="headerlink" href="#hub.Image.SMILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SNAKE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SNAKE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99000:99099:09090:09990:00000:')</span></em><a class="headerlink" href="#hub.Image.SNAKE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SQUARE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SQUARE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99999:90009:90009:90009:99999:')</span></em><a class="headerlink" href="#hub.Image.SQUARE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SQUARE_SMALL">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SQUARE_SMALL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:09990:09090:09990:00000:')</span></em><a class="headerlink" href="#hub.Image.SQUARE_SMALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.STICKFIGURE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">STICKFIGURE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:99999:00900:09090:90009:')</span></em><a class="headerlink" href="#hub.Image.STICKFIGURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SURPRISED">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SURPRISED</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09090:00000:00900:09090:00900:')</span></em><a class="headerlink" href="#hub.Image.SURPRISED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.SWORD">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">SWORD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:00900:00900:09990:00900:')</span></em><a class="headerlink" href="#hub.Image.SWORD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.TARGET">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">TARGET</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:09990:99099:09990:00900:')</span></em><a class="headerlink" href="#hub.Image.TARGET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.TORTOISE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">TORTOISE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:09990:99999:09090:00000:')</span></em><a class="headerlink" href="#hub.Image.TORTOISE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.TRIANGLE">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">TRIANGLE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00900:09090:99999:00000:')</span></em><a class="headerlink" href="#hub.Image.TRIANGLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.TRIANGLE_LEFT">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">TRIANGLE_LEFT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('90000:99000:90900:90090:99999:')</span></em><a class="headerlink" href="#hub.Image.TRIANGLE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.TSHIRT">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">TSHIRT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('99099:99999:09990:09990:09990:')</span></em><a class="headerlink" href="#hub.Image.TSHIRT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.UMBRELLA">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">UMBRELLA</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('09990:99999:00900:90900:09900:')</span></em><a class="headerlink" href="#hub.Image.UMBRELLA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.XMAS">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">XMAS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00900:09990:00900:09990:99999:')</span></em><a class="headerlink" href="#hub.Image.XMAS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt id="hub.Image.YES">
+<code class="sig-prename descclassname"><span class="pre">hub.Image.</span></code><code class="sig-name descname"><span class="pre">YES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">Image('00000:00009:00090:90900:09000:')</span></em><a class="headerlink" href="#hub.Image.YES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Built-in tuples of images</p>
+<dl class="py attribute">
+<dt id="hub.Image.ALL_CLOCKS">
+<code class="sig-prename descclassname"><span class="pre">Image.</span></code><code class="sig-name descname"><span class="pre">ALL_CLOCKS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">(Image('00900:00900:00900:00000:00000:'),</span> <span class="pre">Image('00090:00090:00900:00000:00000:'),</span> <span class="pre">Image('00000:00099:00900:00000:00000:'),</span> <span class="pre">Image('00000:00000:00999:00000:00000:'),</span> <span class="pre">Image('00000:00000:00900:00099:00000:'),</span> <span class="pre">Image('00000:00000:00900:00090:00090:'),</span> <span class="pre">Image('00000:00000:00900:00900:00900:'),</span> <span class="pre">Image('00000:00000:00900:09000:09000:'),</span> <span class="pre">Image('00000:00000:00900:99000:00000:'),</span> <span class="pre">Image('00000:00000:99900:00000:00000:'),</span> <span class="pre">Image('00000:99000:00900:00000:00000:'),</span> <span class="pre">Image('09000:09000:00900:00000:00000:'))</span></em><a class="headerlink" href="#hub.Image.ALL_CLOCKS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="hub.Image.ALL_ARROWS">
+<code class="sig-prename descclassname"><span class="pre">Image.</span></code><code class="sig-name descname"><span class="pre">ALL_ARROWS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">(Image('00900:09990:90909:00900:00900:'),</span> <span class="pre">Image('00999:00099:00909:09000:90000:'),</span> <span class="pre">Image('00900:00090:99999:00090:00900:'),</span> <span class="pre">Image('90000:09000:00909:00099:00999:'),</span> <span class="pre">Image('00900:00900:90909:09990:00900:'),</span> <span class="pre">Image('00009:00090:90900:99000:99900:'),</span> <span class="pre">Image('00900:09000:99999:09000:00900:'),</span> <span class="pre">Image('99900:99000:90900:00090:00009:'))</span></em><a class="headerlink" href="#hub.Image.ALL_ARROWS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="class_bt_vcp.html" class="btn btn-neutral float-right" title="hub.BT_VCP – BT_VCP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mod_supervision.html" class="btn btn-neutral float-left" title="hub.supervision – Supervision" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, LEGO System A/S.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

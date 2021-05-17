@@ -1,0 +1,53 @@
+:mod:`hub.port <hub.port>` -- Port
+==================================================
+
+.. automodule:: hub.port
+
+Attributes
+^^^^^^^^^^
+
+.. autodata:: hub.port.A
+    :annotation:
+
+.. autodata:: hub.port.B
+    :annotation:
+
+.. autodata:: hub.port.C
+    :annotation:
+
+.. autodata:: hub.port.D
+    :annotation:
+
+.. autodata:: hub.port.E
+    :annotation:
+
+.. autodata:: hub.port.F
+    :annotation:
+
+
+Constants
+^^^^^^^^^
+
+.. _port_constants_events:
+
+These constants can be used with the :class:`Port.callback <Port>` method.
+
+.. rubric:: Port events
+
+.. autodata:: hub.port.DETACHED
+
+.. autodata:: hub.port.ATTACHED
+
+.. rubric:: Port modes
+
+.. _port_constants_modes:
+
+These constants can be used with the :class:`Port.mode <Port>` method.
+
+.. autodata:: hub.port.MODE_DEFAULT
+
+.. autodata:: hub.port.MODE_FULL_DUPLEX
+
+.. autodata:: hub.port.MODE_HALF_DUPLEX
+
+.. autodata:: hub.port.MODE_GPIO

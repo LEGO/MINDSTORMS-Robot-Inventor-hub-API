@@ -1,0 +1,25 @@
+:mod:`hub.sound <hub.sound>` -- Sound
+==============================================================
+
+.. automodule:: hub.sound
+
+.. autofunction:: hub.sound.volume
+
+.. autofunction:: hub.sound.beep
+
+.. autofunction:: hub.sound.play
+
+.. autofunction:: hub.sound.callback
+
+Constants
+^^^^^^^^^
+
+These values are used by the :func:`hub.sound.beep` function.
+
+.. autodata:: hub.sound.SOUND_SIN
+
+.. autodata:: hub.sound.SOUND_SQUARE
+
+.. autodata:: hub.sound.SOUND_TRIANGLE
+
+.. autodata:: hub.sound.SOUND_SAWTOOTH

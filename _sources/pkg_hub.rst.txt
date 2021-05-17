@@ -1,0 +1,45 @@
+:mod:`hub <hub>` -- Top level functions and classes
+===================================================
+
+.. automodule:: hub
+
+Attributes
+^^^^^^^^^^
+
+.. autodata:: hub.__version__
+    :annotation:
+
+.. autodata:: hub.config
+    :annotation:
+
+Functions
+^^^^^^^^^
+
+.. autofunction:: hub.info
+
+.. autofunction:: hub.status
+
+.. autofunction:: hub.power_off
+
+.. autofunction:: hub.repl_restart
+
+.. autofunction:: hub.temperature
+
+.. autofunction:: hub.led
+
+.. autofunction:: hub.file_transfer
+
+Constants
+^^^^^^^^^
+
+.. autodata:: hub.TOP
+
+.. autodata:: hub.FRONT
+
+.. autodata:: hub.RIGHT
+
+.. autodata:: hub.BOTTOM
+
+.. autodata:: hub.BACK
+
+.. autodata:: hub.LEFT

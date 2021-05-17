@@ -1,0 +1,15 @@
+Pin
+==================================================
+
+This class can be used to read and control the two logic pins on pins 5 and 6
+of each port. You can access two ``Pin`` objects via each :class:`Port`
+instance if the port has been set to :attr:`MODE_GPIO <hub.port.MODE_GPIO>`
+mode.
+
+.. class:: Pin
+
+    Control a general purpose input/output (GPIO) pin.
+
+    .. automethod:: hub.port.Pin.direction
+
+    .. automethod:: hub.port.Pin.value

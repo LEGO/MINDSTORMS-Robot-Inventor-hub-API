@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>MotorPair &mdash; hub-api  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pin" href="class_pin.html" />
+    <link rel="prev" title="Motor" href="class_motor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> hub-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.2.01.0103-d08b6fe
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Hub modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pkg_hub.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub</span></code> – Top level functions and classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_battery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.battery</span></code> – Battery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_bluetooth.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.bluetooth</span></code> – Bluetooth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_button.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.button</span></code> – Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_display.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.display</span></code> – Display</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_motion.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.motion</span></code> – Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_port.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.port</span></code> – Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_sound.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.sound</span></code> – Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_supervision.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hub.supervision</span></code> – Supervision</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="class_image.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.Image</span></code> – Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_bt_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.BT_VCP</span></code> – BT_VCP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_usb_vcp.html"><code class="xref py py-class docutils literal notranslate"><span class="pre">hub.USB_VCP</span></code> – USB_VCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Instantiated classes</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="class_port.html">Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_device.html">Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_motor.html">Motor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MotorPair</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class_pin.html">Pin</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Documentation license</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">hub-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>MotorPair</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="motorpair">
+<h1>MotorPair<a class="headerlink" href="#motorpair" title="Permalink to this headline">¶</a></h1>
+<p>This class can be used to control pairs of motors. You create <code class="docutils literal notranslate"><span class="pre">MotorPair</span></code>
+objects using the <code class="docutils literal notranslate"><span class="pre">pair()</span></code> method of a <a class="reference internal" href="class_motor.html#Motor" title="Motor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Motor</span></code></a> object.</p>
+<dl class="py class">
+<dt id="MotorPair">
+<em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">MotorPair</span></code><a class="headerlink" href="#MotorPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control two motors simultaneously in a synchronized way.</p>
+<dl class="py method">
+<dt id="hub.port.MotorPair.id">
+<code class="sig-name descname"><span class="pre">id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#hub.port.MotorPair.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the motor pair identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The motor pair identifier.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.primary">
+<code class="sig-name descname"><span class="pre">primary</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="class_motor.html#Motor" title="Motor"><span class="pre">Motor</span></a><a class="headerlink" href="#hub.port.MotorPair.primary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the motor object on which <a class="reference internal" href="class_motor.html#hub.port.Motor.pair" title="hub.port.Motor.pair"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pair</span></code></a> was called
+to create this pair object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The primary motor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.secondary">
+<code class="sig-name descname"><span class="pre">secondary</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="class_motor.html#Motor" title="Motor"><span class="pre">Motor</span></a><a class="headerlink" href="#hub.port.MotorPair.secondary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the motor object that was the parameter in the
+<a class="reference internal" href="class_motor.html#hub.port.Motor.pair" title="hub.port.Motor.pair"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pair</span></code></a> call to create this pair object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The secondary motor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.unpair">
+<code class="sig-name descname"><span class="pre">unpair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#hub.port.MotorPair.unpair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uncouples the two motors so they can be used by other pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the operation succeeded, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.float">
+<code class="sig-name descname"><span class="pre">float</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Floats (coasts) both motors, as if disconnected from the hub.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.brake">
+<code class="sig-name descname"><span class="pre">brake</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.brake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Passively brakes both motors, as if shorting the motor terminals.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.hold">
+<code class="sig-name descname"><span class="pre">hold</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.hold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actively holds both motor in their current position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.pwm">
+<code class="sig-name descname"><span class="pre">pwm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pwm_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwm_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.pwm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies PWM signals to the power pins of both motors.</p>
+<p>A PWM value of 0 has the same effect
+as <a class="reference internal" href="#hub.port.MotorPair.float" title="hub.port.MotorPair.float"><code class="xref py py-meth docutils literal notranslate"><span class="pre">float()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pwm_0</strong> – PWM value between -100 and +100 for the primary motor.
+The polarity of the PWM signal matches the sign of the value.
+A value of 0 stops the PWM signal and leaves the port driver
+in the floating state.</p></li>
+<li><p><strong>pwm_1</strong> – PWM value for the secondary motor, as above.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.run_at_speed">
+<code class="sig-name descname"><span class="pre">run_at_speed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.run_at_speed" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">run_at_speed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_power</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Starts running both motor at given speeds.</p>
+<p>If a keyword argument is not given, its default value will be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>speed_0</strong> – Sets the speed of the primary motor as a percentage of the
+rated speed for this motor. Positive means clockwise, negative
+means counterclockwise.</p></li>
+<li><p><strong>speed_1</strong> – Sets the speed of the secondary motor, as above.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>max_power</strong> – Sets percentage of maximum power used during this
+command.</p></li>
+<li><p><strong>acceleration</strong> – The time in milliseconds (0-10000) for a
+motor to reach maximum rated speed from standstill.</p></li>
+<li><p><strong>deceleration</strong> – The time in milliseconds (0-10000) for a
+motor to stop when starting from the maximum rated speed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.run_for_time">
+<code class="sig-name descname"><span class="pre">run_for_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msec</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.run_for_time" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">run_for_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msec</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_power</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Runs both motors for a given amount of time.</p>
+<p>If a keyword argument is not given, its default value will be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msec</strong> – How long the motors should run in milliseconds. Negative
+values will be treated as zero.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>speed_0</strong> – Sets the speed of the primary motor as a percentage of the
+rated speed for this motor. Positive means clockwise, negative
+means counterclockwise.</p></li>
+<li><p><strong>speed_1</strong> – Sets the speed of the secondary motor, as above.</p></li>
+<li><p><strong>max_power</strong> – Sets percentage of maximum power used during this
+command.</p></li>
+<li><p><strong>acceleration</strong> – The time in milliseconds (0-10000) for a
+motor to reach maximum rated speed from standstill.</p></li>
+<li><p><strong>deceleration</strong> – The time in milliseconds (0-10000) for a
+motor to stop when starting from the maximum rated speed.</p></li>
+<li><p><strong>stop</strong> – How to stop. Choose type: Choose
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_FLOAT" title="hub.port.Motor.STOP_FLOAT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_FLOAT</span></code></a>,
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_BRAKE" title="hub.port.Motor.STOP_BRAKE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_BRAKE</span></code></a>, or
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_HOLD" title="hub.port.Motor.STOP_HOLD"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_HOLD</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.run_for_degrees">
+<code class="sig-name descname"><span class="pre">run_for_degrees</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degrees</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.run_for_degrees" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">run_for_degrees</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degrees</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_power</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Runs the motors for the given number of degrees, on average.</p>
+<p>If a keyword argument is not given, its default value will be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>degrees</strong> – How many degrees to rotate relative to the starting point,
+on average. The ratio of the speeds will determine how many
+degrees each motor rotates. The sign of <code class="docutils literal notranslate"><span class="pre">degrees</span></code> is ignored.
+The directions are determined by the speed arguments, if given.</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>speed_0</strong> – Sets the speed of the primary motor as a percentage of the
+rated speed for this motor. Positive means clockwise, negative
+means counterclockwise.</p></li>
+<li><p><strong>speed_1</strong> – Sets the speed of the secondary motor, as above.</p></li>
+<li><p><strong>max_power</strong> – Sets percentage of maximum power used during this
+command.</p></li>
+<li><p><strong>max_power</strong> – Sets percentage of maximum power used during this
+command.</p></li>
+<li><p><strong>acceleration</strong> – The time in milliseconds (0-10000) for a
+motor to reach maximum rated speed from standstill.</p></li>
+<li><p><strong>deceleration</strong> – The time in milliseconds (0-10000) for a
+motor to stop when starting from the maximum rated speed.</p></li>
+<li><p><strong>stop</strong> – How to stop. Choose type: Choose
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_FLOAT" title="hub.port.Motor.STOP_FLOAT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_FLOAT</span></code></a>,
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_BRAKE" title="hub.port.Motor.STOP_BRAKE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_BRAKE</span></code></a>, or
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_HOLD" title="hub.port.Motor.STOP_HOLD"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_HOLD</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.run_to_position">
+<code class="sig-name descname"><span class="pre">run_to_position</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.run_to_position" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-name descname"><span class="pre">run_to_position</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_power</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deceleration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Runs both motors to a given angular position.</p>
+<p>If a keyword argument is not given, its default value will be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position_0</strong> – Angular position target for the primary motor.</p></li>
+<li><p><strong>position_1</strong> – Angular position target for the secondary motor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>speed</strong> – Sets the speed of the motor that has to travel the farthest,
+as a percentage of the rated speed for this motor. The other
+motor speed will be selected such that both motors
+arrive at their respective positions at the same time.</p></li>
+<li><p><strong>max_power</strong> – Sets percentage of maximum power used during this
+command.</p></li>
+<li><p><strong>max_power</strong> – Sets percentage of maximum power used during this
+command.</p></li>
+<li><p><strong>acceleration</strong> – The time in milliseconds (0-10000) for a
+motor to reach maximum rated speed from standstill.</p></li>
+<li><p><strong>deceleration</strong> – The time in milliseconds (0-10000) for a
+motor to stop when starting from the maximum rated speed.</p></li>
+<li><p><strong>stop</strong> – How to stop. Choose type: Choose
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_FLOAT" title="hub.port.Motor.STOP_FLOAT"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_FLOAT</span></code></a>,
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_BRAKE" title="hub.port.Motor.STOP_BRAKE"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_BRAKE</span></code></a>, or
+<a class="reference internal" href="class_motor.html#hub.port.Motor.STOP_HOLD" title="hub.port.Motor.STOP_HOLD"><code class="xref py py-attr docutils literal notranslate"><span class="pre">STOP_HOLD</span></code></a>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.preset">
+<code class="sig-name descname"><span class="pre">preset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position_0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Presets the starting positions used by
+<a class="reference internal" href="#hub.port.MotorPair.run_to_position" title="hub.port.MotorPair.run_to_position"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_to_position</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position_0</strong> – The new position preset of the primary motor.</p></li>
+<li><p><strong>position_1</strong> – The new position preset of the secondary motor.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.callback">
+<code class="sig-name descname"><span class="pre">callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the callback function that is called when a command
+is completed, interrupted, or stalled.</p>
+<p>The function must accept one argument, which indicates why
+the callback was called. It will receive either
+<a class="reference internal" href="class_motor.html#hub.port.Motor.EVENT_COMPLETED" title="hub.port.Motor.EVENT_COMPLETED"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EVENT_COMPLETED</span></code></a>,
+<a class="reference internal" href="class_motor.html#hub.port.Motor.EVENT_INTERRUPTED" title="hub.port.Motor.EVENT_INTERRUPTED"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EVENT_INTERRUPTED</span></code></a>,
+or <a class="reference internal" href="class_motor.html#hub.port.Motor.EVENT_STALLED" title="hub.port.Motor.EVENT_STALLED"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EVENT_STALLED</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>function</strong> – Callable function that takes one argument. Choose
+<code class="docutils literal notranslate"><span class="pre">None</span></code> to disable the callback.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hub.port.MotorPair.pid">
+<code class="sig-name descname"><span class="pre">pid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.port.MotorPair.pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the p, i, and d constants of the MotorPair PID controllers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> – Proportional constant.</p></li>
+<li><p><strong>i</strong> – Integral constant.</p></li>
+<li><p><strong>d</strong> – Derivative constant.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="class_pin.html" class="btn btn-neutral float-right" title="Pin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_motor.html" class="btn btn-neutral float-left" title="Motor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, LEGO System A/S.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
