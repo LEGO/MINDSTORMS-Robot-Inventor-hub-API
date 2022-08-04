@@ -62,10 +62,6 @@
           
             
             
-              <div class="version">
-                v1.2.01.0103-d08b6fe
-              </div>
-            
           
 
           
@@ -206,6 +202,36 @@ it returns <code class="docutils literal notranslate"><span class="pre">0</span>
 </dd></dl>
 
 <dl class="py function">
+<dt id="hub.bluetooth.rfcomm_connect">
+<code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">rfcomm_connect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#hub.bluetooth.rfcomm_connect" title="Permalink to this definition">¶</a></dt>
+<dt>
+<code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">rfcomm_connect</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span></dt>
+<dd><p>Connects to a Bluetooth Classic MAC address.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>address</strong> – A string of format aa:bb:cc:dd:ee:ff that represents the MAC
+address of the Bluetooth Classic device to connect with.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>If no argument is given, returns the MAC address that the RFCOMM
+service is conneted to. If there is no active connection the
+address is <code class="docutils literal notranslate"><span class="pre">00:00:00:00:00:00</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a valid address was given, or <code class="docutils literal notranslate"><span class="pre">False</span></code> if the
+address is not a valid MAC address string.</p>
+<p>The result does not reflect the status of the connection attempt.</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.bluetooth.rfcomm_disconnect">
+<code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">rfcomm_disconnect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.bluetooth.rfcomm_disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnects an active RFCOMM channel</p>
+<p>The result does not reflect the status of the disconnection attempt.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt id="hub.bluetooth.info">
 <code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">info</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#hub.bluetooth.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a dictionary of the form:</p>
@@ -233,14 +259,17 @@ it returns <code class="docutils literal notranslate"><span class="pre">0</span>
     <span class="p">},</span>
 
     <span class="c1"># A list of devices that the hub has been connected to.</span>
-    <span class="s1">&#39;known_devices&#39;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">&#39;known_devices&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;8C:8D:28:2D:E0:0F&#39;</span><span class="p">,</span> <span class="s1">&#39;E8:6D:CB:77:64:D5&#39;</span><span class="p">],</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Bluetooth subsystem information dictionary similar to the example
+<dd class="field-odd"><p><p>Bluetooth subsystem information dictionary similar to the example
 above, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the Bluetooth subsystem is not running.</p>
+<p>The MAC address in <code class="docutils literal notranslate"><span class="pre">known_devices</span></code> is reversed for Windows
+devices.</p>
+</p>
 </dd>
 </dl>
 </dd></dl>

@@ -62,10 +62,6 @@
           
             
             
-              <div class="version">
-                v1.2.01.0103-d08b6fe
-              </div>
-            
           
 
           
@@ -195,14 +191,9 @@
 <dt id="hub.display.rotation">
 <code class="sig-prename descclassname"><span class="pre">hub.display.</span></code><code class="sig-name descname"><span class="pre">rotation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rotation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.display.rotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates the display clockwise relative to its current orientation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>rotation</strong> – How many degrees to rotate.</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>ValueError</strong> – If the argument is not a multiple of 90.</p>
-</dd>
-</dl>
+<p>DEPRECATION WARNING - In the next release this is a do-nothing
+operation. Use the <cite>hub.display.align()</cite> API instead!</p>
+<p>Following the next release this call will be removed.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -287,7 +278,7 @@ pixel. Otherwise it returns <code class="docutils literal notranslate"><span cla
 <dt id="hub.display.show">
 <code class="sig-prename descclassname"><span class="pre">hub.display.</span></code><code class="sig-name descname"><span class="pre">show</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="class_image.html#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.display.show" title="Permalink to this definition">¶</a></dt>
 <dt>
-<code class="sig-prename descclassname"><span class="pre">hub.display.</span></code><code class="sig-name descname"><span class="pre">show</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="class_image.html#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<code class="sig-prename descclassname"><span class="pre">hub.display.</span></code><code class="sig-name descname"><span class="pre">show</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="class_image.html#hub.Image" title="hub.Image"><span class="pre">hub.Image</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fade</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
 <dd><p>Shows an image or a sequence of images.</p>
 <p>Except for <code class="docutils literal notranslate"><span class="pre">image</span></code>, all arguments must be specified as keywords.</p>
 <dl class="field-list simple">
@@ -297,6 +288,9 @@ pixel. Otherwise it returns <code class="docutils literal notranslate"><span cla
 <dt class="field-even">Keyword Arguments</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>delay</strong> – Delay between each image in the iterable.</p></li>
+<li><p><strong>level</strong> – Scales the brightness of each pixel in and image or
+character to a value between <code class="docutils literal notranslate"><span class="pre">0</span></code> (fully off) and
+<code class="docutils literal notranslate"><span class="pre">9</span></code> (fully on).</p></li>
 <li><p><strong>clear</strong> – Choose <code class="docutils literal notranslate"><span class="pre">True</span></code> to clear the display after showing the
 last image in the iterable.</p></li>
 <li><p><strong>wait</strong> – Choose <code class="docutils literal notranslate"><span class="pre">True</span></code> to block your program until all images are shown.

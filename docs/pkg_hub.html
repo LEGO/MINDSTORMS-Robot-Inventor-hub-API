@@ -62,10 +62,6 @@
           
             
             
-              <div class="version">
-                v1.2.01.0103-d08b6fe
-              </div>
-            
           
 
           
@@ -207,10 +203,25 @@ of the components:</p>
 <dt id="hub.config">
 <code class="sig-prename descclassname"><span class="pre">hub.</span></code><code class="sig-name descname"><span class="pre">config</span></code><a class="headerlink" href="#hub.config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dictionary of hub configuration variables.</p>
-<p>You can override its default values in <code class="docutils literal notranslate"><span class="pre">boot.py</span></code>. You can also add your own
-data. This dictionary is accessible to all of your programs until
+<p>You can override its default values in <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> or add your own
+entries. This dictionary is accessible to all of your programs until
 you reboot the hub.</p>
-<p>By default, it has the following entries:</p>
+<p>The values in <code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code> are evaluated in the following order of
+increasing priority:</p>
+<ol class="arabic simple">
+<li><p>Default value as described below. Note that there will be no corresponding
+entry in <code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code></p></li>
+<li><p>If the file <code class="docutils literal notranslate"><span class="pre">/etc/hub_config</span></code> exists and has no syntax errors then it
+is evaluated and may update or create values in <code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code>.</p></li>
+<li><p>If the file <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> exists and has no syntax errors then it
+is evaluated and may update or create values in <code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code>. After
+evaluating <code class="docutils literal notranslate"><span class="pre">boot.py</span></code> the one-time post boot initialization happens.</p></li>
+<li><p>If the file <code class="docutils literal notranslate"><span class="pre">main.py</span></code> exists and has no syntax errors then it
+is evaluated and may update or create values in <code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code>.</p></li>
+<li><p>Any user supplied file or console commands may override an entry in
+<code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code>.</p></li>
+</ol>
+<p>By default <code class="docutils literal notranslate"><span class="pre">hub.config[]</span></code> has the following entries:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code>: Identifies the hub in various places such as Bluetooth
 advertising. This value is read from <code class="docutils literal notranslate"><span class="pre">/etc/hostname</span></code>.</p></li>
@@ -229,6 +240,9 @@ Protocol commands. It is <code class="docutils literal notranslate"><span class=
 if USB is connected after shutdown.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">powerdown_timeout</span></code>: Sets the inactivity timeout (ms) before the hub
 shuts down. Set to <code class="docutils literal notranslate"><span class="pre">0</span></code> to disable automatic shutdown.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_get_can_return_float</span></code>: Configures whether a device (sensor or motor)
+returns an integer or float as a result of executing the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method.
+Default value is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
 </dd></dl>
 
