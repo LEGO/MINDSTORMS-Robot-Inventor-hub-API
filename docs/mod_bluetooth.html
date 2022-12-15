@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 
   
   
@@ -228,6 +229,34 @@ address is not a valid MAC address string.</p>
 <dt id="hub.bluetooth.rfcomm_disconnect">
 <code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">rfcomm_disconnect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.bluetooth.rfcomm_disconnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disconnects an active RFCOMM channel</p>
+<p>The result does not reflect the status of the disconnection attempt.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.bluetooth.iap2_connect">
+<code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">iap2_connect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hub.bluetooth.iap2_connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to a Bluetooth Classic MAC address.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>address</strong> – A string of format aa:bb:cc:dd:ee:ff that represents the MAC
+address of the Bluetooth Classic device to connect with.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>If no argument is given, returns the MAC address that the IAP2
+service is conneted to. If there is no active connection the
+address is <code class="docutils literal notranslate"><span class="pre">00:00:00:00:00:00</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a valid address was given, or <code class="docutils literal notranslate"><span class="pre">False</span></code> if the
+address is not a valid MAC address string.</p>
+<p>The result does not reflect the status of the connection attempt.</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="hub.bluetooth.iap2_disconnect">
+<code class="sig-prename descclassname"><span class="pre">hub.bluetooth.</span></code><code class="sig-name descname"><span class="pre">iap2_disconnect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#hub.bluetooth.iap2_disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnects an active IAP2 channel</p>
 <p>The result does not reflect the status of the disconnection attempt.</p>
 </dd></dl>
 

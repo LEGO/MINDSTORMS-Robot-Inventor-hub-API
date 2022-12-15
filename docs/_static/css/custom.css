@@ -1,0 +1,14 @@
+@import url(//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular);
+@font-face {
+    font-family: "CeraPRO-Regular";
+    src: url("//db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.eot");
+    src: url("//db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.eot?#iefix") format("embedded-opentype"),
+         url("//db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.woff2") format("woff2"),
+         url("//db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.woff") format("woff"),
+         url("//db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.ttf") format("truetype"),
+         url("//db.onlinewebfonts.com/t/917a69d24b88e2d4d2ca803c0605bd59.svg#CeraPRO-Regular") format("svg");
+    }    
+body{
+
+    font-family: "CeraPRO-Regular", "CeraPRO-Regular", woff2;
+}
